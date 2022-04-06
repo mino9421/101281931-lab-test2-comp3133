@@ -1,0 +1,36 @@
+<ul *ngIf="switch === false">
+    <img src="{{mission.links.mission_patch_small}}"/>
+    <div mat-line><h1>{{mission.mission_name}}</h1></div>
+    <div mat-line><h4>{{mission.launch_year}}</h4></div>
+    <div>Details:<br/><h5>{{mission.details}}</h5></div>
+    <div>
+        <br/>
+        <button (click)="openDetails()">View Details</button>
+    </div>
+</ul>
+
+
+<ul *ngIf="switch === true">
+    <img src='{{mission.links.mission_patch_small}}'/>
+    <div mat-line><h1>SpaceX Mission Details</h1></div>
+  <div ><h1>Mission - {{mission.mission_name}}</h1></div>
+  <div ><p>Launch Year: {{mission.launch_year}}</p></div>
+  <div ><h2>Rocket</h2></div>
+  <div ><p>Name: {{mission.rocket.rocket_name}}, Type: {{mission.rocket.rocket_type}}</p></div>
+  <div ><h2>Launch Site</h2></div>
+  <div ><p>Name: {{mission.launch_site.site_name_long}}</p></div>
+  <div ><h2>Launch Details</h2></div>
+  <div>
+      <h5>{{mission.details}}</h5>
+  </div>
+  <div><h2>More Info on Launch Details</h2></div>
+  <div>
+    <a href="{{mission.links.video_link}}" target="_blank" ><mat-icon>video_library</mat-icon></a>
+    <a href="{{mission.links.wikipedia}}" target="_blank" ><mat-icon>search</mat-icon></a>
+    <a href="{{mission.links.article_link}}" target="_blank" ><mat-icon>bookmark</mat-icon></a>
+  </div>
+  <div>
+    <br/>
+    <button (click)="openDetails()">Close Details</button>
+  </div>
+</ul>

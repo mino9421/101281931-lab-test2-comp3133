@@ -1,0 +1,5 @@
+<h1>SpaceX Missions</h1>
+
+<mat-list *ngFor="let mission of data; let i = index;">
+    <app-missiondetails [item]="mission"></app-missiondetails>
+</mat-list>
